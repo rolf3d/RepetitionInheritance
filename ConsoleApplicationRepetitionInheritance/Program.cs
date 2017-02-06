@@ -10,6 +10,9 @@ namespace ConsoleApplicationRepetitionInheritance
     {
         static void Main(string[] args)
         {
+            Bil minbil = new Bil("Ford",200000,2012,18);
+
+            Console.WriteLine("Total Pris: {0} Afgift: {1} Indkøbspris: {2}", minbil.TotalPris(), minbil.RegistreringsAfgift(), minbil.BilPrisExAfgift);
         }
     }
 }

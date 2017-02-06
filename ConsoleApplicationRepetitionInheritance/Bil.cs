@@ -10,23 +10,31 @@ namespace ConsoleApplicationRepetitionInheritance
     public class Bil
     {
         public double BilPrisExAfgift { get; set; }
-        public int KøbsÅr { get; set; }
+        public double KøbsÅr { get; set; }
         public string Mærke { get; set; }
         public string RegistreringsNr { get; set; }
         public int KmPrLiter { get; set; }
         public double afgift { get; set; }
 
+        public Bil(string mærke,double bilprisexafgift,double købsår,int kmprliter)
+        {
+            this.Mærke = mærke;
+            this.BilPrisExAfgift = bilprisexafgift;
+            this.KøbsÅr = købsår;
+            this.KmPrLiter = kmprliter;
+        }
+
         public virtual double RegistreringsAfgift()
         {
-            afgift = 0.0;
-            if (KøbsÅr <= 2014 && BilPrisExAfgift >= 80500)
+            
+            if (KøbsÅr <= 2014 && BilPrisExAfgift <= 80500)
             {
                 
                 return afgift = (BilPrisExAfgift*1.05) - BilPrisExAfgift;
             }
-            else if (KøbsÅr >= 2015 && BilPrisExAfgift >= 81700)
+            else if (KøbsÅr >= 2015 && BilPrisExAfgift <= 81700)
             {
-                return afgift = (BilPrisExAfgift*1.05) - afgift;
+                return afgift = (BilPrisExAfgift*1.05) - BilPrisExAfgift;
             }
             else
             {
@@ -38,7 +46,7 @@ namespace ConsoleApplicationRepetitionInheritance
 
         public virtual double TotalPris()
         {
-            return BilPrisExAfgift + afgift;
+            return BilPrisExAfgift + RegistreringsAfgift();
         }
 
         public virtual double HalvÅrligEjerafgift()

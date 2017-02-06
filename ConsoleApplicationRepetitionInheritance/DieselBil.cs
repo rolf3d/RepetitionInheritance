@@ -9,12 +9,12 @@ namespace ConsoleApplicationRepetitionInheritance
     public class DieselBil : Bil
     {
         public bool PartikelFilter { get; set; }
-        public DieselBil(string mærke, double bilprisexafgift, double købsår, int kmprliter, bool partikelFilter) : base(mærke, bilprisexafgift, købsår, kmprliter)
+        public DieselBil(string mærke, double bilprisexafgift, double købsår, int kmprliter,string registreringnr, bool partikelFilter) : base(mærke, bilprisexafgift, købsår, kmprliter,registreringnr)
         {
             PartikelFilter = partikelFilter;
         }
 
-        public DieselBil(string mærke,double bilprisexafgift,double købsår,int kmprliter) : this(mærke,bilprisexafgift,købsår,kmprliter,true)
+        public DieselBil(string mærke,double bilprisexafgift,double købsår,int kmprliter,string registreringnr) : this(mærke,bilprisexafgift,købsår,kmprliter,registreringnr,true)
         {
             
         }

@@ -16,12 +16,13 @@ namespace ConsoleApplicationRepetitionInheritance
         public int KmPrLiter { get; set; }
         public double afgift { get; set; }
 
-        public Bil(string mærke,double bilprisexafgift,double købsår,int kmprliter)
+        public Bil(string mærke,double bilprisexafgift,double købsår,int kmprliter,string registreringnr)
         {
             this.Mærke = mærke;
             this.BilPrisExAfgift = bilprisexafgift;
             this.KøbsÅr = købsår;
             this.KmPrLiter = kmprliter;
+            this.RegistreringsNr = registreringnr;
         }
 
         public virtual double RegistreringsAfgift()

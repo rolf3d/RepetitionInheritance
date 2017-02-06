@@ -14,6 +14,11 @@ namespace ConsoleApplicationRepetitionInheritance
             PartikelFilter = partikelFilter;
         }
 
+        public DieselBil(string mærke,double bilprisexafgift,double købsår,int kmprliter) : this(mærke,bilprisexafgift,købsår,kmprliter,true)
+        {
+            
+        }
+
         public override double HalvÅrligEjerafgift()
         {
             if (PartikelFilter == false)

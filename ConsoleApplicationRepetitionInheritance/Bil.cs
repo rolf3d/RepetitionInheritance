@@ -14,7 +14,8 @@ namespace ConsoleApplicationRepetitionInheritance
         public string Mærke { get; set; }
         public string RegistreringsNr { get; set; }
         public int KmPrLiter { get; set; }
-        public double afgift { get; set; }
+        public double afgift105 { get; set; }
+        public double afgidt180 { get; set; }
 
         public Bil(string mærke,double bilprisexafgift,double købsår,int kmprliter,string registreringnr)
         {
@@ -27,20 +28,32 @@ namespace ConsoleApplicationRepetitionInheritance
 
         public virtual double RegistreringsAfgift()
         {
-            
-            if (KøbsÅr <= 2014 && BilPrisExAfgift <= 80500)
+            double totalafgift = 0.0;
+            if (KøbsÅr <= 2014)
             {
-                
-                return afgift = (BilPrisExAfgift*1.05) - BilPrisExAfgift;
+                if (BilPrisExAfgift > 80500)
+                {
+                    afgift105 = (80500  * 1.05);
+                    afgidt180 = (BilPrisExAfgift - 80500) * 1.8;
+                    totalafgift = afgidt180 + afgift105;
+                    return totalafgift - BilPrisExAfgift;
+                }
+                    return (BilPrisExAfgift * 1.05) - BilPrisExAfgift;
             }
-            else if (KøbsÅr >= 2015 && BilPrisExAfgift <= 81700)
+            else if (KøbsÅr > 2015)
             {
-                return afgift = (BilPrisExAfgift*1.05) - BilPrisExAfgift;
+                if (BilPrisExAfgift > 81700)
+                {
+                    afgift105 = (81700*1.05);
+                    afgidt180 = (BilPrisExAfgift - 81700)*1.8;
+                    totalafgift = afgidt180 + afgift105;
+                    return totalafgift - BilPrisExAfgift;
+                }
+                return (BilPrisExAfgift * 1.05) - BilPrisExAfgift;
             }
             else
             {
-                return afgift = (BilPrisExAfgift * 1.80) - BilPrisExAfgift;
-
+                return totalafgift;
             }
             
         }

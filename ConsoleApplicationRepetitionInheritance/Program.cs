@@ -16,11 +16,11 @@ namespace ConsoleApplicationRepetitionInheritance
 
             List<DieselBil> dieselbilListe = new List<DieselBil>();
 
-            DieselBil Dbil01 = new DieselBil("VW",387000,2017,16,"A1",true);
-            DieselBil Dbil02 = new DieselBil("VW",280000,2016,21,"A2",true);
-            DieselBil Dbil03 = new DieselBil("Opel",122000,2016,24,"B1",true);
-            DieselBil Dbil04 = new DieselBil("Ford",240000,2013,16,"B2",false);
-            DieselBil Dbil05 = new DieselBil("Toyota",290000,2012,14,"C1",false);
+            DieselBil Dbil01 = new DieselBil("VW",50000,2017,16,"A1",true);
+            DieselBil Dbil02 = new DieselBil("VW",50000,2013,21,"A2",true);
+            DieselBil Dbil03 = new DieselBil("Opel",100000,2016,24,"B1",true);
+            DieselBil Dbil04 = new DieselBil("Ford",130000,2013,16,"B2",false);
+            DieselBil Dbil05 = new DieselBil("Toyota",50000,2012,14,"C1",false);
 
             dieselbilListe.Add(Dbil01);
             dieselbilListe.Add(Dbil02);
@@ -30,7 +30,7 @@ namespace ConsoleApplicationRepetitionInheritance
 
             foreach (var biler in dieselbilListe)
             {
-                Console.WriteLine("Registrering nummer: {0} Halvårrigt ejerafgift: {1}", biler.RegistreringsNr, biler.HalvÅrligEjerafgift());
+                Console.WriteLine("Registrering nummer: {0} Halvårrigt ejerafgift: {1} Bilensbris med afgift: {2}", biler.RegistreringsNr, biler.HalvÅrligEjerafgift(), biler.TotalPris());
             }
 
 

@@ -21,14 +21,40 @@ namespace ConsoleApplicationRepetitionInheritance
 
         public override double HalvÅrligEjerafgift()
         {
-            if (PartikelFilter == false)
+            if (PartikelFilter == true)
             {
                 // Hvis partikelfilter ikke findes på bilen, er der en ekstra afgift på 500.
-                double ekstra = 500.0;
-                return base.HalvÅrligEjerafgift() + ekstra;
-                
+
+                if (KmPrLiter < 15)
+                {
+                    return 2000;
+                }
+                if (KmPrLiter >= 15 && KmPrLiter <= 25)
+                {
+                    return 1000;
+                }
+                if (KmPrLiter > 25)
+                {
+                    return 350;
+                }
+
             }
-            return base.HalvÅrligEjerafgift();
+            else if (PartikelFilter == false)
+            {
+                if (KmPrLiter < 15)
+                {
+                    return 2500;
+                }
+                if (KmPrLiter >= 15 && KmPrLiter <= 25)
+                {
+                    return 1500;
+                }
+                if (KmPrLiter > 25)
+                {
+                    return 850;
+                }
+            }
+            return 1000;
         }
     }
 }

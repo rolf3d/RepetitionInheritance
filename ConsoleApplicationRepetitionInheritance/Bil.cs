@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplicationRepetitionInheritance
 {
-    public class Bil
+    public abstract class Bil
     {
         public double BilPrisExAfgift { get; set; }
         public double KøbsÅr { get; set; }
@@ -64,9 +64,9 @@ namespace ConsoleApplicationRepetitionInheritance
             return BilPrisExAfgift + RegistreringsAfgift();
         }
 
-        public virtual double HalvÅrligEjerafgift()
-        {
-            return 1000;
-        }
+        public abstract double HalvÅrligEjerafgift();
+        //{
+        //    return 1000;
+        //}
     }
 }

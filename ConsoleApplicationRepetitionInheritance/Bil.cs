@@ -18,14 +18,13 @@ namespace ConsoleApplicationRepetitionInheritance
         public double afgidt180 { get; set; }
         public int Tank { get; set; }
 
-        public Bil(string mærke,double bilprisexafgift,double købsår,int kmprliter,string registreringnr,int tank)
+        public Bil(string mærke,double bilprisexafgift,double købsår,string registreringnr)
         {
             this.Mærke = mærke;
             this.BilPrisExAfgift = bilprisexafgift;
             this.KøbsÅr = købsår;
-            this.KmPrLiter = kmprliter;
             this.RegistreringsNr = registreringnr;
-            this.Tank = tank;
+            
         }
 
         public virtual double RegistreringsAfgift()

@@ -9,19 +9,17 @@ namespace ConsoleApplicationRepetitionInheritance
     public class DieselBil : Bil
     {
         public bool PartikelFilter { get; set; }
-        public DieselBil(string mærke, double bilprisexafgift, double købsår, int kmprliter,string registreringnr, bool partikelFilter,int tank) : base(mærke, bilprisexafgift, købsår, kmprliter,registreringnr,tank)
+        public DieselBil(string mærke, double bilprisexafgift, double købsår, int kmprliter,string registreringnr, bool partikelFilter,int tank) : base(mærke, bilprisexafgift, købsår,registreringnr)
         {
             PartikelFilter = partikelFilter;
+            this.KmPrLiter = kmprliter;
+            this.Tank = tank;
         }
-
-        public DieselBil(string mærke,double bilprisexafgift,double købsår,int kmprliter,string registreringnr,int tank) : this(mærke,bilprisexafgift,købsår,kmprliter,registreringnr,true,tank)
-        {
-            
-        }
+        
 
         public override double HalvÅrligEjerafgift()
         {
-            if (PartikelFilter == true)
+            if (PartikelFilter)
             {
                 // Hvis partikelfilter ikke findes på bilen, er der en ekstra afgift på 500.
 

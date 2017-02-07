@@ -13,7 +13,7 @@ namespace ConsoleApplicationRepetitionInheritance
             //Bil minbil = new Bil("Ford",200000,2012,18);
 
             //Console.WriteLine("Total Pris: {0} Afgift: {1} Indkøbspris: {2}", minbil.TotalPris(), minbil.RegistreringsAfgift(), minbil.BilPrisExAfgift);
-
+            Console.WriteLine("--------------------Diesel Bil--------------------------");
             List<DieselBil> dieselbilListe = new List<DieselBil>();
 
             DieselBil Dbil01 = new DieselBil("VW",50000,2017,16,"A1",true,60);
@@ -32,7 +32,7 @@ namespace ConsoleApplicationRepetitionInheritance
             {
                 Console.WriteLine("Registrering nummer: {0} Halvårrigt ejerafgift: {1} Bilensbris med afgift: {2} Rækkevidde: {3}", biler.RegistreringsNr, biler.HalvÅrligEjerafgift(), biler.TotalPris(), biler.Rækkevidde());
             }
-
+            Console.WriteLine("--------------------Benzin Bil--------------------------");
             BenzinBil benzbil01 = new BenzinBil("Opel",190000,2016,24,"AA12",80);
             BenzinBil benzbil02 = new BenzinBil("Toyota",355000,2014,17,"NN13",76);
             BenzinBil benzbil03 = new BenzinBil("Ford",155000,2012,13,"AS14",60);
@@ -48,7 +48,27 @@ namespace ConsoleApplicationRepetitionInheritance
 
             foreach (var benzinBil in benzinbilliste)
             {
-                Console.WriteLine("Benzinbil. Mærke: {0} Pris: {1} Købsår: {2} KmLiter: {3} Registreringsnummer: {4} Halvårigejerafgift: {5} Rækkevidde: {6}", benzinBil.Mærke, benzinBil.BilPrisExAfgift, benzinBil.KøbsÅr, benzinBil.KmPrLiter, benzinBil.RegistreringsNr, benzinBil.HalvÅrligEjerafgift(), benzinBil.Rækkevidde());
+                Console.WriteLine("Benzinbil. Mærke: {0} Pris: {1} Købsår: {2} \n KmLiter: {3} Registreringsnummer: {4} Halvårigejerafgift: {5} \n Rækkevidde: {6}", benzinBil.Mærke, benzinBil.BilPrisExAfgift, benzinBil.KøbsÅr, benzinBil.KmPrLiter, benzinBil.RegistreringsNr, benzinBil.HalvÅrligEjerafgift(), benzinBil.Rækkevidde());
+            }
+
+            Console.WriteLine("--------------------El Bil--------------------------");
+            ElBil elbil01 = new ElBil("Yoga",120000,2016,"EL01",120,20);
+            ElBil elbil02 = new ElBil("Ellert",90000,1992,"EL123",20,60);
+            ElBil elbil03 = new ElBil("Tesla",720000,2016,"TESLA007",50,42);
+            ElBil elbil04 = new ElBil("Bobo", 21000, 2000, "BO09", 10, 20);
+            ElBil elbil05 = new ElBil("Jep", 210000, 2014, "J123EP", 30, 22);
+
+
+            List<ElBil> elbilliste = new List<ElBil>();
+            elbilliste.Add(elbil01);
+            elbilliste.Add(elbil02);
+            elbilliste.Add(elbil03);
+            elbilliste.Add(elbil04);
+            elbilliste.Add(elbil05);
+
+            foreach (var elBil in elbilliste)
+            {
+                Console.WriteLine("Elbil. Mærke: {0} Pris: {1} Årgang: {2} \n Regnr: {3} Batteri: {4} KmPrKW: {5} HalvÅrligEjerafgift: {6} \n RegistreringsAfgift: {7} Rækkevidde: {8}", elBil.Mærke, elBil.BilPrisExAfgift,elBil.KøbsÅr,elBil.RegistreringsNr,elBil.BatteriKapacitet,elBil.KmPrKW, elBil.HalvÅrligEjerafgift(),elBil.RegistreringsAfgift(),elBil.Rækkevidde());
             }
 
 

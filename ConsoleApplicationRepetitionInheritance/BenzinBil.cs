@@ -9,8 +9,10 @@ namespace ConsoleApplicationRepetitionInheritance
 {
     public sealed class BenzinBil : Bil
     {
-        public BenzinBil(string mærke, double bilprisexafgift, double købsår, int kmprliter, string registreringnr,int tank) : base(mærke, bilprisexafgift, købsår, kmprliter, registreringnr,tank)
+        public BenzinBil(string mærke, double bilprisexafgift, double købsår, int kmprliter, string registreringnr,int tank) : base(mærke, bilprisexafgift, købsår, registreringnr)
         {
+            this.KmPrLiter = kmprliter;
+            this.Tank = tank;
         }
 
         public override double HalvÅrligEjerafgift()

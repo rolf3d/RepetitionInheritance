@@ -51,6 +51,7 @@ namespace ConsoleApplicationRepetitionInheritance
                 }
                 return (BilPrisExAfgift * 1.05) - BilPrisExAfgift;
             }
+            
             else
             {
                 return totalafgift;

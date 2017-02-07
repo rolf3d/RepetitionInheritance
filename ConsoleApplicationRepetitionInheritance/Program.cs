@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -72,6 +73,47 @@ namespace ConsoleApplicationRepetitionInheritance
             }
 
 
+            Console.WriteLine("-------------------- Polymorfisme --------------------------");
+            List<Bil> allebilerliste = new List<Bil>();
+
+            allebilerliste.Add(benzbil01);
+            allebilerliste.Add(benzbil02);
+            allebilerliste.Add(benzbil03);
+            allebilerliste.Add(benzbil04);
+            allebilerliste.Add(benzbil05);
+
+            allebilerliste.Add(Dbil01);
+            allebilerliste.Add(Dbil02);
+            allebilerliste.Add(Dbil03);
+            allebilerliste.Add(Dbil04);
+            allebilerliste.Add(Dbil05);
+
+            allebilerliste.Add(elbil01);
+            allebilerliste.Add(elbil02);
+            allebilerliste.Add(elbil03);
+            allebilerliste.Add(elbil04);
+            allebilerliste.Add(elbil05);
+
+            foreach (var bil in allebilerliste)
+            {
+                if (bil is DieselBil)
+                {
+                    DieselBil dieselbil = bil as DieselBil;
+                    Console.WriteLine("Diesel bil: Registrering nummer: {0} Halvårrigt ejerafgift: {1} Bilensbris med afgift: {2} Rækkevidde: {3} Partikelfilter: {4}", dieselbil.PartikelFilter, dieselbil.RegistreringsNr, dieselbil.HalvÅrligEjerafgift(), dieselbil.TotalPris(), dieselbil.Rækkevidde());
+                }
+                else if (bil is BenzinBil)
+                {
+                    BenzinBil benzinbil = bil as BenzinBil;
+                    Console.WriteLine("Benzinbil. Mærke: {0} Pris: {1} Købsår: {2} \n KmLiter: {3} Registreringsnummer: {4} Halvårigejerafgift: {5} \n Rækkevidde: {6}", benzinbil.Mærke, benzinbil.BilPrisExAfgift, benzinbil.KøbsÅr, benzinbil.KmPrLiter, benzinbil.RegistreringsNr, benzinbil.HalvÅrligEjerafgift(), benzinbil.Rækkevidde());
+                
+                }
+                else
+                {
+                    ElBil elbil = bil as ElBil;
+                    Console.WriteLine("Elbil. Mærke: {0} Pris: {1} Årgang: {2} \n Regnr: {3} Batteri: {4} KmPrKW: {5} HalvÅrligEjerafgift: {6} \n RegistreringsAfgift: {7} Rækkevidde: {8}", elbil.Mærke, elbil.BilPrisExAfgift, elbil.KøbsÅr, elbil.RegistreringsNr, elbil.BatteriKapacitet, elbil.KmPrKW, elbil.HalvÅrligEjerafgift(), elbil.RegistreringsAfgift(), elbil.Rækkevidde());
+                
+                }
+            }
 
             Console.ReadLine();
         }

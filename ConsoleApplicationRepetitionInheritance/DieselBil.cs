@@ -9,12 +9,12 @@ namespace ConsoleApplicationRepetitionInheritance
     public class DieselBil : Bil
     {
         public bool PartikelFilter { get; set; }
-        public DieselBil(string mærke, double bilprisexafgift, double købsår, int kmprliter,string registreringnr, bool partikelFilter) : base(mærke, bilprisexafgift, købsår, kmprliter,registreringnr)
+        public DieselBil(string mærke, double bilprisexafgift, double købsår, int kmprliter,string registreringnr, bool partikelFilter,int tank) : base(mærke, bilprisexafgift, købsår, kmprliter,registreringnr,tank)
         {
             PartikelFilter = partikelFilter;
         }
 
-        public DieselBil(string mærke,double bilprisexafgift,double købsår,int kmprliter,string registreringnr) : this(mærke,bilprisexafgift,købsår,kmprliter,registreringnr,true)
+        public DieselBil(string mærke,double bilprisexafgift,double købsår,int kmprliter,string registreringnr,int tank) : this(mærke,bilprisexafgift,købsår,kmprliter,registreringnr,true,tank)
         {
             
         }
@@ -55,6 +55,11 @@ namespace ConsoleApplicationRepetitionInheritance
                 }
             }
             return 1000;
+        }
+
+        public override int Rækkevidde()
+        {
+            return Tank*KmPrLiter;
         }
     }
 }

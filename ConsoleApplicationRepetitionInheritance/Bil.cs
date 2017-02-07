@@ -16,14 +16,16 @@ namespace ConsoleApplicationRepetitionInheritance
         public int KmPrLiter { get; set; }
         public double afgift105 { get; set; }
         public double afgidt180 { get; set; }
+        public int Tank { get; set; }
 
-        public Bil(string mærke,double bilprisexafgift,double købsår,int kmprliter,string registreringnr)
+        public Bil(string mærke,double bilprisexafgift,double købsår,int kmprliter,string registreringnr,int tank)
         {
             this.Mærke = mærke;
             this.BilPrisExAfgift = bilprisexafgift;
             this.KøbsÅr = købsår;
             this.KmPrLiter = kmprliter;
             this.RegistreringsNr = registreringnr;
+            this.Tank = tank;
         }
 
         public virtual double RegistreringsAfgift()
@@ -68,5 +70,8 @@ namespace ConsoleApplicationRepetitionInheritance
         //{
         //    return 1000;
         //}
+
+        public abstract int Rækkevidde();
+
     }
 }

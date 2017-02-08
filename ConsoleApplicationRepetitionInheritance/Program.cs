@@ -49,7 +49,7 @@ namespace ConsoleApplicationRepetitionInheritance
 
             foreach (var benzinBil in benzinbilliste)
             {
-                Console.WriteLine("Benzinbil. Mærke: {0} Pris: {1} Købsår: {2} \n KmLiter: {3} Registreringsnummer: {4} Halvårigejerafgift: {5} \n Rækkevidde: {6}", benzinBil.Mærke, benzinBil.BilPrisExAfgift, benzinBil.KøbsÅr, benzinBil.KmPrLiter, benzinBil.RegistreringsNr, benzinBil.HalvÅrligEjerafgift(), benzinBil.Rækkevidde());
+                Console.WriteLine("Benzinbil. Mærke: {0} Pris: {1} Købsår: {2} \n KmLiter: {3} Registreringsnummer: {4} Halvårigejerafgift: {5} \n Rækkevidde: {6} Lydstyrke: {7}", benzinBil.Mærke, benzinBil.BilPrisExAfgift, benzinBil.KøbsÅr, benzinBil.KmPrLiter, benzinBil.RegistreringsNr, benzinBil.HalvÅrligEjerafgift(), benzinBil.Rækkevidde(), benzinBil.LydStyrke());
             }
 
             Console.WriteLine("--------------------El Bil--------------------------");

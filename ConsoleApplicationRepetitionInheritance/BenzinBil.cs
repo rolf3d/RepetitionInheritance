@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplicationRepetitionInheritance
 {
-    public sealed class BenzinBil : Bil
+    public sealed class BenzinBil : Bil , IbilRadio
     {
         public BenzinBil(string mærke, double bilprisexafgift, double købsår, int kmprliter, string registreringnr,int tank) : base(mærke, bilprisexafgift, købsår, registreringnr)
         {
@@ -35,6 +35,11 @@ namespace ConsoleApplicationRepetitionInheritance
         public override int Rækkevidde()
         {
             return Tank*KmPrLiter;
+        }
+
+        public string LydStyrke()
+        {
+            return  "100 DB";
         }
     }
 }

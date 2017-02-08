@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplicationRepetitionInheritance
 {
-    public class ElBil : Bil
+    public class ElBil : Bil , IeLMotor
     {
         public int BatteriKapacitet { get; set; }
         public int KmPrKW { get; set; }
@@ -59,6 +59,13 @@ namespace ConsoleApplicationRepetitionInheritance
         public override int Rækkevidde()
         {
             return BatteriKapacitet*KmPrKW;
+        }
+
+        //public int ladetid { get; set; }
+        public int LadeTid()
+        {
+           
+            return 5;
         }
     }
 }

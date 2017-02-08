@@ -73,8 +73,8 @@ namespace ConsoleApplicationRepetitionInheritance
             }
 
 
-            Console.WriteLine("-------------------- Polymorfisme --------------------------");
-            List<Bil> allebilerliste = new List<Bil>();
+            Console.WriteLine("-------------------- Polymorfisme IBIL --------------------------");
+            List<IBil> allebilerliste = new List<IBil>();
 
             allebilerliste.Add(benzbil01);
             allebilerliste.Add(benzbil02);
@@ -110,10 +110,12 @@ namespace ConsoleApplicationRepetitionInheritance
                 else
                 {
                     ElBil elbil = bil as ElBil;
-                    Console.WriteLine("Elbil. Mærke: {0} Pris: {1} Årgang: {2} \n Regnr: {3} Batteri: {4} KmPrKW: {5} HalvÅrligEjerafgift: {6} \n RegistreringsAfgift: {7} Rækkevidde: {8}", elbil.Mærke, elbil.BilPrisExAfgift, elbil.KøbsÅr, elbil.RegistreringsNr, elbil.BatteriKapacitet, elbil.KmPrKW, elbil.HalvÅrligEjerafgift(), elbil.RegistreringsAfgift(), elbil.Rækkevidde());
+                    Console.WriteLine("Elbil. Mærke: {0} Pris: {1} Årgang: {2} \n Regnr: {3} Batteri: {4} KmPrKW: {5} HalvÅrligEjerafgift: {6} \n RegistreringsAfgift: {7} Rækkevidde: {8} Ladetid: {9}", elbil.Mærke, elbil.BilPrisExAfgift, elbil.KøbsÅr, elbil.RegistreringsNr, elbil.BatteriKapacitet, elbil.KmPrKW, elbil.HalvÅrligEjerafgift(), elbil.RegistreringsAfgift(), elbil.Rækkevidde(), elbil.LadeTid());
                 
                 }
             }
+            
+
 
             Console.ReadLine();
         }

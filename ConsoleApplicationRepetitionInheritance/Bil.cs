@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplicationRepetitionInheritance
 {
-    public abstract class Bil
+   
+    public abstract class Bil : IBil
     {
         public double BilPrisExAfgift { get; set; }
         public double KøbsÅr { get; set; }

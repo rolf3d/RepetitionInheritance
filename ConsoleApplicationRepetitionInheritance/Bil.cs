@@ -33,7 +33,7 @@ namespace ConsoleApplicationRepetitionInheritance
             double totalafgift = 0.0;
             if (KøbsÅr <= 2014)
             {
-                if (BilPrisExAfgift > 80500)
+                if (BilPrisExAfgift >= 80500)
                 {
                     afgift105 = (80500  * 1.05);
                     afgidt180 = (BilPrisExAfgift - 80500) * 1.8;
@@ -42,9 +42,9 @@ namespace ConsoleApplicationRepetitionInheritance
                 }
                     return (BilPrisExAfgift * 1.05) - BilPrisExAfgift;
             }
-            else if (KøbsÅr > 2015)
+            else if (KøbsÅr >= 2015)
             {
-                if (BilPrisExAfgift > 81700)
+                if (BilPrisExAfgift >= 81700)
                 {
                     afgift105 = (81700*1.05);
                     afgidt180 = (BilPrisExAfgift - 81700)*1.8;
@@ -67,9 +67,6 @@ namespace ConsoleApplicationRepetitionInheritance
         }
 
         public abstract double HalvÅrligEjerafgift();
-        //{
-        //    return 1000;
-        //}
 
         public abstract int Rækkevidde();
 

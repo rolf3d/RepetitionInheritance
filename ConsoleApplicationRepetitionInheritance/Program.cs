@@ -23,7 +23,7 @@ namespace ConsoleApplicationRepetitionInheritance
             DieselBil Dbil04 = new DieselBil("Ford",130000,2013,16,"B2",false,55);
             DieselBil Dbil05 = new DieselBil("Toyota",50000,2012,14,"C1",false,65);
 
-            dieselbilListe.Add(Dbil01);
+            dieselbilListe.dd(Dbil01);
             dieselbilListe.Add(Dbil02);
             dieselbilListe.Add(Dbil03);
             dieselbilListe.Add(Dbil04);
@@ -53,7 +53,7 @@ namespace ConsoleApplicationRepetitionInheritance
             }
 
             Console.WriteLine("--------------------El Bil--------------------------");
-            ElBil elbil01 = new ElBil("Yoga",120000,2016,"EL01",120,20);
+            ElBil elbil01 = new ElBil("Yoga",10000,2016,"EL01",120,20);
             ElBil elbil02 = new ElBil("Ellert",90000,1992,"EL123",20,60);
             ElBil elbil03 = new ElBil("Tesla",720000,2016,"TESLA007",50,42);
             ElBil elbil04 = new ElBil("Bobo", 21000, 2000, "BO09", 10, 20);

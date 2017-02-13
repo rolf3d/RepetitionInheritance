@@ -23,7 +23,7 @@ namespace ConsoleApplicationRepetitionInheritance
             DieselBil Dbil04 = new DieselBil("Ford",130000,2013,16,"B2",false,55);
             DieselBil Dbil05 = new DieselBil("Toyota",50000,2012,14,"C1",false,65);
 
-            dieselbilListe.dd(Dbil01);
+            dieselbilListe.Add(Dbil01);
             dieselbilListe.Add(Dbil02);
             dieselbilListe.Add(Dbil03);
             dieselbilListe.Add(Dbil04);

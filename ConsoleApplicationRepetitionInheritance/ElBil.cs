@@ -29,7 +29,7 @@ namespace ConsoleApplicationRepetitionInheritance
             double totalafgift;
             if (KøbsÅr <= 2014)
             {
-                if (BilPrisExAfgift > 80500)
+                if (BilPrisExAfgift >= 80500)
                 {
                     afgift105 = (80500 * 1.05);
                     afgidt180 = (BilPrisExAfgift - 80500) * 1.8;
@@ -38,7 +38,7 @@ namespace ConsoleApplicationRepetitionInheritance
                 }
                 return ((BilPrisExAfgift * 1.05) - BilPrisExAfgift) * 0.2;
             }
-            else if (KøbsÅr > 2015)
+            else if (KøbsÅr >= 2015)
             {
                 if (BilPrisExAfgift > 81700)
                 {

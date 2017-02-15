@@ -54,6 +54,7 @@
     <Compile Include="BenzinBilTests.cs" />
     <Compile Include="BilTests.cs" />
     <Compile Include="DieselBilTests.cs" />
+    <Compile Include="ElBilTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -34,9 +34,9 @@ namespace ConsoleApplicationRepetitionInheritance
                     afgift105 = (80500 * 1.05);
                     afgidt180 = (BilPrisExAfgift - 80500) * 1.8;
                     totalafgift = afgidt180 + afgift105;
-                    return (totalafgift - BilPrisExAfgift)* 0.2;
+                    return (totalafgift)* 0.2;
                 }
-                return ((BilPrisExAfgift * 1.05) - BilPrisExAfgift) * 0.2;
+                return ((BilPrisExAfgift * 1.05)) * 0.2;
             }
             else if (KøbsÅr >= 2015)
             {
@@ -45,9 +45,9 @@ namespace ConsoleApplicationRepetitionInheritance
                     afgift105 = (81700 * 1.05);
                     afgidt180 = (BilPrisExAfgift - 81700) * 1.8;
                     totalafgift = afgidt180 + afgift105;
-                    return (totalafgift - BilPrisExAfgift) * 0.2;
+                    return (totalafgift) * 0.2;
                 }
-                return ((BilPrisExAfgift * 1.05) - BilPrisExAfgift) * 0.2;
+                return ((BilPrisExAfgift * 1.05)) * 0.2;
             }
 
             else

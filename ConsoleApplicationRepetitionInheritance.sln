@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplicationRepetitionInheritance", "ConsoleApplicationRepetitionInheritance\ConsoleApplicationRepetitionInheritance.csproj", "{6D104E62-263B-4FB4-8869-B8F77606839F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplicationRepetitionInheritanceTests", "ConsoleApplicationRepetitionInheritanceTests\ConsoleApplicationRepetitionInheritanceTests.csproj", "{D376CEC2-D58C-4157-9A64-58C3784CB69C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6D104E62-263B-4FB4-8869-B8F77606839F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D104E62-263B-4FB4-8869-B8F77606839F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D104E62-263B-4FB4-8869-B8F77606839F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D376CEC2-D58C-4157-9A64-58C3784CB69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D376CEC2-D58C-4157-9A64-58C3784CB69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D376CEC2-D58C-4157-9A64-58C3784CB69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D376CEC2-D58C-4157-9A64-58C3784CB69C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
